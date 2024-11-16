@@ -12,6 +12,10 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.login>sqp_c43c0b884d585888e7684451cca1ea65508bca8e</sonar.login>
     </properties>
 
     <reporting>
@@ -32,7 +36,25 @@
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>3.3.0</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+            </plugin>
         </plugins>
     </reporting>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>4.0.0.4121</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:file:///D:/Atelier3-GL/atelier3/</connection>
+    </scm>
 
 </project>
